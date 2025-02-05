@@ -96,17 +96,16 @@
                                     </progressView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="pqh-bV-aZf" firstAttribute="leading" secondItem="UNV-cd-HAH" secondAttribute="leading" constant="40" id="0ag-np-nmn"/>
-                                    <constraint firstAttribute="trailing" secondItem="Kai-QT-t2b" secondAttribute="trailing" constant="40" id="3tZ-ZV-jFY"/>
-                                    <constraint firstItem="Kai-QT-t2b" firstAttribute="leading" secondItem="UNV-cd-HAH" secondAttribute="leading" constant="40" id="4Db-PX-w3C"/>
+                                    <constraint firstItem="4J8-t8-hTx" firstAttribute="top" secondItem="UNV-cd-HAH" secondAttribute="top" constant="20" id="2Vu-Fo-4R7"/>
+                                    <constraint firstItem="Kai-QT-t2b" firstAttribute="leading" secondItem="UNV-cd-HAH" secondAttribute="leading" constant="40" id="3E1-7e-wiY"/>
                                     <constraint firstItem="4J8-t8-hTx" firstAttribute="leading" secondItem="UNV-cd-HAH" secondAttribute="leading" id="4h4-ci-qCF"/>
-                                    <constraint firstAttribute="bottom" secondItem="LCW-6f-mhx" secondAttribute="bottom" constant="20" id="4nW-T9-dXc"/>
                                     <constraint firstItem="LCW-6f-mhx" firstAttribute="centerX" secondItem="UNV-cd-HAH" secondAttribute="centerX" id="BmA-eS-jd6"/>
-                                    <constraint firstAttribute="trailing" secondItem="pqh-bV-aZf" secondAttribute="trailing" constant="40" id="F48-a4-Ksz"/>
-                                    <constraint firstItem="LCW-6f-mhx" firstAttribute="top" secondItem="pqh-bV-aZf" secondAttribute="bottom" constant="20" id="eAz-zW-71Z"/>
-                                    <constraint firstItem="pqh-bV-aZf" firstAttribute="top" secondItem="Kai-QT-t2b" secondAttribute="bottom" constant="50" id="gSQ-nf-6S0"/>
-                                    <constraint firstItem="4J8-t8-hTx" firstAttribute="top" secondItem="UNV-cd-HAH" secondAttribute="top" constant="20" id="gzJ-8G-AiZ"/>
+                                    <constraint firstItem="pqh-bV-aZf" firstAttribute="leading" secondItem="UNV-cd-HAH" secondAttribute="leading" constant="40" id="Cek-bz-puQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kai-QT-t2b" secondAttribute="trailing" constant="40" id="DzN-G7-abo"/>
+                                    <constraint firstItem="pqh-bV-aZf" firstAttribute="top" secondItem="Kai-QT-t2b" secondAttribute="bottom" constant="40" id="YsJ-uu-jdb"/>
+                                    <constraint firstAttribute="trailing" secondItem="pqh-bV-aZf" secondAttribute="trailing" constant="40" id="c9d-Pr-UTg"/>
                                     <constraint firstAttribute="trailing" secondItem="LCW-6f-mhx" secondAttribute="trailing" id="kAI-xQ-Xxw"/>
+                                    <constraint firstItem="LCW-6f-mhx" firstAttribute="top" secondItem="pqh-bV-aZf" secondAttribute="bottom" constant="140" id="rO3-Gy-Oha"/>
                                     <constraint firstItem="LCW-6f-mhx" firstAttribute="leading" secondItem="UNV-cd-HAH" secondAttribute="leading" id="tHg-Kz-ETp"/>
                                 </constraints>
                             </stackView>
