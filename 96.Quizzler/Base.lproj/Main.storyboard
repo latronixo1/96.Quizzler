@@ -119,6 +119,13 @@
                             <constraint firstItem="elN-z7-gFp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vHx-Ai-U3P"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="falseButton" destination="pqh-bV-aZf" id="z72-Cx-1zD"/>
+                        <outlet property="progressView" destination="LCW-6f-mhx" id="GC4-bg-Uc6"/>
+                        <outlet property="questionLabel" destination="rGl-yO-b6G" id="Plh-Og-HWB"/>
+                        <outlet property="scoreLabel" destination="4J8-t8-hTx" id="JCp-Rc-ZMl"/>
+                        <outlet property="trueButton" destination="Kai-QT-t2b" id="HNG-x1-7KN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
