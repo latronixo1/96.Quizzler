@@ -18,6 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Баллы: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2n-X1-PUG" userLabel="scoreLabel">
+                                <rect key="frame" x="0.0" y="25" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NYc-31-dTP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="elN-z7-gFp">
                                 <rect key="frame" x="0.0" y="565" width="375" height="102"/>
                                 <constraints>
@@ -27,22 +36,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UNV-cd-HAH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4J8-t8-hTx">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="xIW-c5-BSx"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Баллы: ">
-                                                <attributes>
-                                                    <font key="NSFont" size="17" name="Arial-BoldMT"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rGl-yO-b6G">
-                                        <rect key="frame" x="0.0" y="30" width="375" height="473"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="503"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="30"/>
                                         <color key="textColor" systemColor="groupTableViewBackgroundColor"/>
@@ -84,7 +79,6 @@
                                     </progressView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="4J8-t8-hTx" firstAttribute="leading" secondItem="UNV-cd-HAH" secondAttribute="leading" id="4h4-ci-qCF"/>
                                     <constraint firstItem="LCW-6f-mhx" firstAttribute="centerX" secondItem="UNV-cd-HAH" secondAttribute="centerX" id="BmA-eS-jd6"/>
                                     <constraint firstAttribute="trailing" secondItem="LCW-6f-mhx" secondAttribute="trailing" id="kAI-xQ-Xxw"/>
                                     <constraint firstItem="LCW-6f-mhx" firstAttribute="leading" secondItem="UNV-cd-HAH" secondAttribute="leading" id="tHg-Kz-ETp"/>
@@ -98,8 +92,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UNV-cd-HAH" secondAttribute="trailing" id="Ief-zw-MYK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UNV-cd-HAH" secondAttribute="bottom" id="PJG-fz-JW8"/>
                             <constraint firstItem="UNV-cd-HAH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RC4-nx-VeP"/>
+                            <constraint firstItem="W2n-X1-PUG" firstAttribute="trailing" secondItem="elN-z7-gFp" secondAttribute="trailing" id="SJg-Dp-dRP"/>
                             <constraint firstItem="UNV-cd-HAH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Uzh-Fw-OmM"/>
+                            <constraint firstItem="W2n-X1-PUG" firstAttribute="leading" secondItem="elN-z7-gFp" secondAttribute="leading" id="bj4-x3-oOS"/>
                             <constraint firstAttribute="bottom" secondItem="elN-z7-gFp" secondAttribute="bottom" id="gfM-m1-jUe"/>
+                            <constraint firstItem="W2n-X1-PUG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="rcr-5K-sVE"/>
                             <constraint firstItem="elN-z7-gFp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rkq-9E-eor"/>
                         </constraints>
                     </view>
@@ -107,7 +104,7 @@
                         <outlet property="falseButton" destination="pqh-bV-aZf" id="z72-Cx-1zD"/>
                         <outlet property="progressView" destination="LCW-6f-mhx" id="GC4-bg-Uc6"/>
                         <outlet property="questionLabel" destination="rGl-yO-b6G" id="Plh-Og-HWB"/>
-                        <outlet property="scoreLabel" destination="4J8-t8-hTx" id="JCp-Rc-ZMl"/>
+                        <outlet property="scoreLabel" destination="W2n-X1-PUG" id="7i3-Vp-Yeh"/>
                         <outlet property="trueButton" destination="Kai-QT-t2b" id="HNG-x1-7KN"/>
                     </connections>
                 </viewController>
@@ -126,7 +123,7 @@
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

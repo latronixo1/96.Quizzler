@@ -18,13 +18,11 @@ class ViewController: UIViewController {
     var quizBrain = QuizBrain()
     
     
-//    //таймер для смены цвета фона кнопки на исходный
-//    private var timer = Timer()
+    //таймер для смены цвета фона кнопки на исходный
+    private var timer = Timer()
 
     //нажание кнопки
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-//        //инвалидируем (сбрасываем, если запущен) таймер - для исключения дублирования (запуска нескольких таймеров одновременно)
-//        timer.invalidate()
         
         //Проверка ответа
         //ответ пользователя
@@ -38,17 +36,14 @@ class ViewController: UIViewController {
             return
         }
         
+        //если пользователь ответил верно, то делаем кнопку зеленой, а если нет - то красной
+        let userGotItRight = quizBrain.checkAnswer(userAnswer)
+        sender.backgroundColor = userGotItRight ? UIColor.green : UIColor.red
         
-        sender.backgroundColor = quizBrain.checkAnswer(userAnswer)
+        quizBrain.nextQuestion()
         
-        //меняем номер вопроса
-        questionNumber = questionNumber == quiz.count - 1 ? 0 : questionNumber + 1
-
-        //ставим таймер на 0.2 секунды, чтобы вернуть цвет фона кнопки на исходный и отобразить следующий вопрос
-        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: true)
-        
-        
-        
+        //ставим таймер на 0.3 секунды, чтобы вернуть цвет фона кнопки на исходный и отобразить следующий вопрос
+        timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(updateUI), userInfo: nil, repeats: true)
     }
     
     override func viewDidLoad() {
@@ -62,14 +57,17 @@ class ViewController: UIViewController {
     //отображение нового вопроса
     @objc func updateUI() {
         //в текстовую метку запишем текст вопроса
-        questionLabel.text = quiz[questionNumber].text
+        questionLabel.text = quizBrain.getQuestionText()
 
         //убираем цвет фона кнопок (он показал, правильно ли ответил пользователь), теперь можно убрать
         trueButton.backgroundColor = UIColor.clear
         falseButton.backgroundColor = UIColor.clear
 
         //изменим позицию ProgressView
-        progressView.setProgress(Float(questionNumber + 1) / Float(quiz.count), animated: true)
+        progressView.setProgress(quizBrain.getProgress(), animated: true)
+        
+        //обновил количество баллов:
+        scoreLabel.text = "Баллы: \(quizBrain.getScores())"
     }
 
     

@@ -9,7 +9,7 @@ import Foundation
 
 struct QuizBrain {
     //массив с вопросами
-    private let quiz = [
+    let quiz = [
         Question(q: "Кровь слизняка зеленая", a: "Правда"),
         Question(q: "Примерно четверть костей человека находится в ступнях", a: "Правда"),
         Question(q: "Общая площадь двух человеческих легких составляет примерно 70 квадратных метров", a: "Правда"),
@@ -26,15 +26,38 @@ struct QuizBrain {
     
     //номер вопроса
     var questionNumber = 0
-
-    func checkAnswer(_ userAnswer: String) -> UIColor {
+    //количество баллов
+    var scores = 0
+    
+    mutating func checkAnswer(_ userAnswer: String) -> Bool  {
         //проверяем, правильно ли пользователь ответил
         if userAnswer == quiz[questionNumber].answer {
-            return UIColor.green
+            scores += 1
+            return true
         } else {
-            return UIColor.red
+            return false
         }
-        
+    }
 
+    func getQuestionText () -> String {
+        return quiz[questionNumber].text
+    }
+    
+    func getProgress() -> Float {
+        return Float(questionNumber + 1) / Float(quiz.count)
+        
+    }
+    
+    mutating func nextQuestion() {
+        //меняем номер вопроса
+        if questionNumber == quiz.count - 1 {
+            questionNumber = 0
+            scores = 0
+        } else {
+            questionNumber += 1
+        }
+    }
+    mutating func getScores() -> Int {
+        return scores
     }
 }
