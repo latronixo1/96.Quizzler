@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,8 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_3" translatesAutoresizingMaskIntoConstraints="NO" id="elN-z7-gFp">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="elN-z7-gFp">
+                                <rect key="frame" x="0.0" y="565" width="375" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="ek4-Kp-Mtz"/>
+                                </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UNV-cd-HAH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -37,54 +41,38 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGl-yO-b6G">
-                                        <rect key="frame" x="0.0" y="30" width="375" height="433"/>
-                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rGl-yO-b6G">
+                                        <rect key="frame" x="0.0" y="30" width="375" height="473"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="30"/>
                                         <color key="textColor" systemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kai-QT-t2b">
-                                        <rect key="frame" x="0.0" y="463" width="375" height="100"/>
-                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <rect key="frame" x="0.0" y="503" width="375" height="80"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="vsh-fG-Y4a"/>
+                                            <constraint firstAttribute="height" constant="80" id="vsh-fG-Y4a"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
                                         <color key="tintColor" name="AccentColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="True">
-                                                    <attributes>
-                                                        <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <font key="NSFont" size="40" name="Arial-BoldMT"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <color key="baseForegroundColor" systemColor="groupTableViewBackgroundColor"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Правда" backgroundImage="Rectangle">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aRy-fO-e2a"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqh-bV-aZf">
-                                        <rect key="frame" x="0.0" y="563" width="375" height="100"/>
-                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <rect key="frame" x="0.0" y="583" width="375" height="80"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="J1U-dJ-t94"/>
+                                            <constraint firstAttribute="height" constant="80" id="J1U-dJ-t94"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" cornerStyle="medium">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="False">
-                                                    <attributes>
-                                                        <font key="NSFont" size="36" name="Arial-BoldMT"/>
-                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <color key="baseForegroundColor" systemColor="groupTableViewBackgroundColor"/>
-                                        </buttonConfiguration>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Ложь" backgroundImage="Rectangle">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mtu-Cq-xVf"/>
                                         </connections>
@@ -111,16 +99,15 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.22988730669999999" green="0.36720699070000001" blue="0.60778677459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="elN-z7-gFp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="7OS-qo-0gL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UNV-cd-HAH" secondAttribute="trailing" id="Ief-zw-MYK"/>
-                            <constraint firstItem="elN-z7-gFp" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="KbN-Zp-vpG"/>
-                            <constraint firstItem="elN-z7-gFp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OFE-YN-knc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UNV-cd-HAH" secondAttribute="bottom" id="PJG-fz-JW8"/>
                             <constraint firstItem="UNV-cd-HAH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RC4-nx-VeP"/>
-                            <constraint firstItem="elN-z7-gFp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="TaJ-n0-hQu"/>
                             <constraint firstItem="UNV-cd-HAH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Uzh-Fw-OmM"/>
-                            <constraint firstItem="elN-z7-gFp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vHx-Ai-U3P"/>
+                            <constraint firstAttribute="bottom" secondItem="elN-z7-gFp" secondAttribute="bottom" id="gfM-m1-jUe"/>
+                            <constraint firstItem="elN-z7-gFp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rkq-9E-eor"/>
                         </constraints>
                     </view>
                     <connections>
@@ -137,15 +124,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background_3" width="640" height="1136"/>
+        <image name="Background-Bubbles" width="352" height="102"/>
+        <image name="Rectangle" width="322" height="68"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
