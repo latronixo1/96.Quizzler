@@ -84,16 +84,9 @@
                                     </progressView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="4J8-t8-hTx" firstAttribute="top" secondItem="UNV-cd-HAH" secondAttribute="top" constant="20" id="2Vu-Fo-4R7"/>
-                                    <constraint firstItem="Kai-QT-t2b" firstAttribute="leading" secondItem="UNV-cd-HAH" secondAttribute="leading" constant="40" id="3E1-7e-wiY"/>
                                     <constraint firstItem="4J8-t8-hTx" firstAttribute="leading" secondItem="UNV-cd-HAH" secondAttribute="leading" id="4h4-ci-qCF"/>
                                     <constraint firstItem="LCW-6f-mhx" firstAttribute="centerX" secondItem="UNV-cd-HAH" secondAttribute="centerX" id="BmA-eS-jd6"/>
-                                    <constraint firstItem="pqh-bV-aZf" firstAttribute="leading" secondItem="UNV-cd-HAH" secondAttribute="leading" constant="40" id="Cek-bz-puQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="Kai-QT-t2b" secondAttribute="trailing" constant="40" id="DzN-G7-abo"/>
-                                    <constraint firstItem="pqh-bV-aZf" firstAttribute="top" secondItem="Kai-QT-t2b" secondAttribute="bottom" constant="40" id="YsJ-uu-jdb"/>
-                                    <constraint firstAttribute="trailing" secondItem="pqh-bV-aZf" secondAttribute="trailing" constant="40" id="c9d-Pr-UTg"/>
                                     <constraint firstAttribute="trailing" secondItem="LCW-6f-mhx" secondAttribute="trailing" id="kAI-xQ-Xxw"/>
-                                    <constraint firstItem="LCW-6f-mhx" firstAttribute="top" secondItem="pqh-bV-aZf" secondAttribute="bottom" constant="140" id="rO3-Gy-Oha"/>
                                     <constraint firstItem="LCW-6f-mhx" firstAttribute="leading" secondItem="UNV-cd-HAH" secondAttribute="leading" id="tHg-Kz-ETp"/>
                                 </constraints>
                             </stackView>
@@ -133,7 +126,7 @@
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
