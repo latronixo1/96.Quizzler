@@ -63,32 +63,36 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.red
         }
         
-        //ставим таймер на 2 секунды, чтобы вернуть цвет фона кнопки на исходный
-        timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        //ставим таймер на 0.2 секунды, чтобы вернуть цвет фона кнопки на исходный и отобразить следующий вопрос
+        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: true)
         
         //меняем номер вопроса
         questionNumber = questionNumber == quiz.count - 1 ? 0 : questionNumber + 1
         
         
-        updateUI()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //отобразим новый вопрос
         updateUI()
-    }
-    
-    func updateUI() {
-        questionLabel.text = quiz[questionNumber].text
         
     }
+    
+    //отображение нового вопроса
+    @objc func updateUI() {
+        //в текстовую метку запишем текст вопроса
+        questionLabel.text = quiz[questionNumber].text
 
-    @objc func updateTimer() {
+        //убираем цвет фона кнопок (он показал, правильно ли ответил пользователь), теперь можно убрать
         trueButton.backgroundColor = UIColor.clear
         falseButton.backgroundColor = UIColor.clear
 
+        //изменим позицию ProgressView
+        progressView.setProgress(Float(questionNumber + 1) / Float(quiz.count), animated: true)
     }
+
     
 }
 
